@@ -1,0 +1,119 @@
+body {
+    background-color: #000;
+    color: #00ff00; /* Ярко-зеленый шрифт, как в старых консолях */
+    font-family: 'Consolas', 'Monaco', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Эффект свечения */
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #ff00ff; /* Фиолетовый цвет для WEEORY */
+    text-shadow: 0 0 5px #ff00ff;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #00ff00;
+}
+
+/* --- Поле вывода пароля --- */
+.output-box {
+    display: flex;
+    align-items: center;
+    background-color: #111;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    margin-bottom: 20px;
+    word-break: break-all;
+}
+
+#password-output {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 1.2em;
+    color: #ffffff; /* Пароль делаем белым для контраста */
+}
+
+/* --- Элементы управления (Input, Checkbox) --- */
+.settings {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #222;
+    border: 1px solid #00ff00;
+    color: #fff;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-group label {
+    margin-left: 10px;
+}
+
+/* --- Кнопки --- */
+button {
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #00ff00;
+    background-color: #00ff00;
+    color: #000;
+    font-weight: bold;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+    background-color: #00dd00;
+}
+
+#copy-button {
+    margin-left: 10px;
+    background-color: #444;
+    color: #00ff00;
+    border-color: #00ff00;
+}
+
+#copy-button:hover {
+    background-color: #555;
+}
+
+.generate-btn {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
