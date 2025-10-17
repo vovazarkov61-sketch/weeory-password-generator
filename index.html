@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEEORY - Генератор Паролей</title>
+    <title>🔒 Генератор Надежных Паролей</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>WEEORY </h1>
+        <h1>WEEORYGENPASS</h1>
         <h2>Генератор Надежных Паролей</h2>
 
         <div class="output-box">
@@ -16,7 +16,15 @@
             <button id="copy-button">Копировать</button>
             <button id="save-button" title="Сохранить текущий пароль в избранное">⭐</button>
         </div>
-
+        
+        <div class="strength-box">
+            <p>Надежность: <span id="strength-status">Ожидание...</span></p>
+            <div id="strength-bar-container">
+                <div id="strength-bar"></div>
+            </div>
+            <p class="small-info">Время взлома: <span id="crack-time">—</span></p>
+        </div>
+        
         <div class="favorite-box">
             <h3>Избранный Пароль:</h3>
             <p id="favorite-output">Нет сохраненного пароля</p>
@@ -52,7 +60,7 @@
         </button>
         
         <p class="footer">
-            <small>Секретное слово: WEEORY</small>
+            <small>Секретное слово: telegabot</small>
         </p>
     </div>
 
