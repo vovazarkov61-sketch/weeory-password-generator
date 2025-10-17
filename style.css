@@ -1,6 +1,6 @@
 body {
     background-color: #000;
-    color: #00ff00; /* Ярко-зеленый шрифт, как в старых консолях */
+    color: #00ff00;
     font-family: 'Consolas', 'Monaco', monospace;
     display: flex;
     justify-content: center;
@@ -15,14 +15,14 @@ body {
     max-width: 450px;
     padding: 20px;
     border: 2px solid #00ff00;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Эффект свечения */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
     box-sizing: border-box;
 }
 
 h1 {
     font-size: 3em;
     text-align: center;
-    color: #ff00ff; /* Фиолетовый цвет для WEEORYGENPASS */
+    color: #ff00ff;
     text-shadow: 0 0 5px #ff00ff;
     margin-bottom: 5px;
 }
@@ -50,10 +50,46 @@ h2 {
     flex-grow: 1;
     margin: 0;
     font-size: 1.2em;
-    color: #ffffff; /* Пароль делаем белым для контраста */
+    color: #ffffff;
 }
 
-/* --- НОВЫЙ РАЗДЕЛ: Избранное --- */
+/* --- НОВЫЕ СТИЛИ: ИНДИКАТОР НАДЕЖНОСТИ (Strength Meter) --- */
+.strength-box {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #1a1a1a;
+}
+
+#strength-bar-container {
+    height: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0%; /* Начинаем с нуля, ширина задается JS */
+    transition: width 0.3s ease-in-out;
+}
+
+#strength-status {
+    font-weight: bold;
+    color: #fff; /* Цвет текста будет меняться через JS */
+}
+
+.small-info {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 5px;
+}
+/* --- КОНЕЦ НОВЫХ СТИЛЕЙ --- */
+
+
+/* --- СТИЛИ: Избранное --- */
 .favorite-box {
     background-color: #0d0d0d;
     border: 1px dashed #00ff00;
@@ -61,12 +97,12 @@ h2 {
     margin-top: 25px;
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку, если места мало */
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .favorite-box h3 {
-    width: 100%; /* Заголовок занимает всю ширину */
+    width: 100%;
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1em;
@@ -74,43 +110,15 @@ h2 {
 }
 
 #favorite-output {
-    /* Настройки для сохраненного пароля */
     flex-grow: 1;
     margin: 0;
     font-size: 1.1em;
     word-break: break-all;
-    color: #666; /* Цвет по умолчанию (Нет сохраненного пароля) */
+    color: #666;
 }
 
 
-/* --- Элементы управления (Input, Checkbox) --- */
-.settings {
-    margin-bottom: 20px;
-}
-
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    background-color: #222;
-    border: 1px solid #00ff00;
-    color: #fff;
-    font-size: 1em;
-    box-sizing: border-box;
-}
-
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.checkbox-group label {
-    margin-left: 10px;
-}
-
-/* --- КНОПКИ --- */
+/* --- КНОПКИ (Без изменений) --- */
 button {
     cursor: pointer;
     padding: 10px 15px;
@@ -125,7 +133,6 @@ button:hover {
     background-color: #00dd00;
 }
 
-/* Кнопка Копировать (около генерируемого пароля) */
 #copy-button {
     margin-left: 10px;
     background-color: #444;
@@ -137,10 +144,9 @@ button:hover {
     background-color: #555;
 }
 
-/* НОВАЯ КНОПКА: Сохранить в избранное (Звезда) */
 #save-button {
     margin-left: 10px;
-    background-color: #ff00ff; /* Фиолетовый цвет */
+    background-color: #ff00ff;
     color: #fff;
     border-color: #ff00ff;
     width: 40px; 
@@ -150,7 +156,6 @@ button:hover {
     background-color: #cc00cc;
 }
 
-/* Кнопки в разделе Избранное */
 .favorite-box button {
     margin-left: 5px;
     font-size: 0.9em;
@@ -163,10 +168,9 @@ button:hover {
     border-color: #00ff00;
 }
 
-/* НОВАЯ КНОПКА: Удалить избранное */
 #clear-favorite-button {
-    background-color: #550000; /* Темно-красный фон */
-    color: #ff0000; /* Ярко-красный текст */
+    background-color: #550000;
+    color: #ff0000;
     border-color: #ff0000;
 }
 #clear-favorite-button:hover {
