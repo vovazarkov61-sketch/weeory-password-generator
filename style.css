@@ -22,7 +22,7 @@ body {
 h1 {
     font-size: 3em;
     text-align: center;
-    color: #ff00ff; /* Фиолетовый цвет для WEEORY */
+    color: #ff00ff; /* Фиолетовый цвет для WEEORYGENPASS */
     text-shadow: 0 0 5px #ff00ff;
     margin-bottom: 5px;
 }
@@ -53,6 +53,36 @@ h2 {
     color: #ffffff; /* Пароль делаем белым для контраста */
 }
 
+/* --- НОВЫЙ РАЗДЕЛ: Избранное --- */
+.favorite-box {
+    background-color: #0d0d0d;
+    border: 1px dashed #00ff00;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку, если места мало */
+    align-items: center;
+}
+
+.favorite-box h3 {
+    width: 100%; /* Заголовок занимает всю ширину */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #00ff00;
+}
+
+#favorite-output {
+    /* Настройки для сохраненного пароля */
+    flex-grow: 1;
+    margin: 0;
+    font-size: 1.1em;
+    word-break: break-all;
+    color: #666; /* Цвет по умолчанию (Нет сохраненного пароля) */
+}
+
+
 /* --- Элементы управления (Input, Checkbox) --- */
 .settings {
     margin-bottom: 20px;
@@ -80,7 +110,7 @@ input[type="number"] {
     margin-left: 10px;
 }
 
-/* --- Кнопки --- */
+/* --- КНОПКИ --- */
 button {
     cursor: pointer;
     padding: 10px 15px;
@@ -95,6 +125,7 @@ button:hover {
     background-color: #00dd00;
 }
 
+/* Кнопка Копировать (около генерируемого пароля) */
 #copy-button {
     margin-left: 10px;
     background-color: #444;
@@ -104,6 +135,42 @@ button:hover {
 
 #copy-button:hover {
     background-color: #555;
+}
+
+/* НОВАЯ КНОПКА: Сохранить в избранное (Звезда) */
+#save-button {
+    margin-left: 10px;
+    background-color: #ff00ff; /* Фиолетовый цвет */
+    color: #fff;
+    border-color: #ff00ff;
+    width: 40px; 
+    padding: 10px 0;
+}
+#save-button:hover {
+    background-color: #cc00cc;
+}
+
+/* Кнопки в разделе Избранное */
+.favorite-box button {
+    margin-left: 5px;
+    font-size: 0.9em;
+    padding: 8px 12px;
+}
+
+#copy-favorite-button {
+    background-color: #444;
+    color: #00ff00;
+    border-color: #00ff00;
+}
+
+/* НОВАЯ КНОПКА: Удалить избранное */
+#clear-favorite-button {
+    background-color: #550000; /* Темно-красный фон */
+    color: #ff0000; /* Ярко-красный текст */
+    border-color: #ff0000;
+}
+#clear-favorite-button:hover {
+    background-color: #770000;
 }
 
 .generate-btn {
