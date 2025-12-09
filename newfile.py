@@ -10,10 +10,10 @@ except ImportError:
     pyfiglet = None
 
 # Ваше секретное слово
-SECRET_WORD = "telegabot"
+SECRET_WORD = "WEEORY"
 
 # --- 1. ASCII-арт заголовок ---
-def display_ascii_banner(text="WEEORY", font="big", color="\033[95m", reset_color="\033[0m"):
+def display_ascii_banner(text="JARKOVPASS", font="big", color="\033[95m", reset_color="\033[0m"):
     """
     Выводит заданный текст в виде ASCII-арта.
     Изменен шрифт на "big" для более жирного вида.
