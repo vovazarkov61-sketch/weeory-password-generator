@@ -152,7 +152,7 @@ def run_interactive_generator():
 if __name__ == "__main__":
     # 1. Выводим ASCII-арт WEEORY
     # Изменен шрифт на "big"
-    display_ascii_banner("WEEORY", font="big") 
+    display_ascii_banner("JARKOVPASS", font="big") 
     
     # 2. Запускаем генератор паролей
     run_interactive_generator()
